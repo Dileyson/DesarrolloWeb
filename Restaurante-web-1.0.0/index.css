@@ -109,16 +109,16 @@ h1{
 
 .mi-flecha{
     width: 2vw;
-    height: 2vh;
+    height: 2vw;
     border: 0.5vw solid;
-    border-color: white, transparent,transparent,white;
+    border-color: white transparent transparent white;
     transform: rotate(-136deg);
 
 }
 
 .flecha-invertida{
     position: absolute;
-    animation: slide 4s lineal infinite;
+    animation: slide 4s linear infinite;
     
 }
 
@@ -134,10 +134,10 @@ h1{
     
     80%{   
         opacity: 1;
-        transform: translateY(-1vw);
+        transform: translateY(1vw);
     }
     100%{
         opacity: 0;
-        transform: translateY(-4vw);
+        transform: translateY(4vw);
     }
 }
