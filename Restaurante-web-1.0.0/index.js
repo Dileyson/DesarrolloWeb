@@ -4,11 +4,19 @@
  */
 
 function obtenerValoresFormulario(){
-    let nombre =    document.getElementById(txtNombre).value
-    let correo =    document.getElementById(txtCorreo).value
-    let celular =   document.getElementById(txtCelular).value
-    let direccion = document.getElementById(txtDireccion).value
-    let clave =     document.getElementById(txtClave).value
+    let nombre =    document.getElementById("txtNombre").value
+    let correo =    document.getElementById("txtCorreo").value
+    let celular =   document.getElementById("txtCelular").value
+    let direccion = document.getElementById("txtDireccion").value
+    let clave =     document.getElementById("txtClave").value
+
+    if (correo==""){
+        alert("Vea el correo es obligatorio")
+        document.getElementById("lblAlert").style.display=""
+        document.getElementById("lblAlerta").innerText="Vea el correo es obligatorio"
+
+        return
+    }
 
     //Forma de crear objeto
     let usuario = {
@@ -20,11 +28,19 @@ function obtenerValoresFormulario(){
         usuario.correo = correo
 
         //Bracket notation ["key"]
-        usuario["nombre"] = nombre 
+        usuario["nombre"] = nombre
+        
+        document.getElementById(txtNombre).value = ""
+        document.getElementById(txtCorreo).value = ""
+        document.getElementById(txtCelular).value = ""
+        document.getElementById(txtDireccion).value = ""
+        document.getElementById(txtClave).value = ""
 
         console.log(usuario)
-    
+
 }
 
 
-
+function cargarPagina{
+    document.getElementById("lblAlert").style.display="none"
+}
