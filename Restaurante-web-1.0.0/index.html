@@ -11,7 +11,7 @@
 
 </head>
 <body>
-
+<div id="app-vue">
     <section id="app">
 
         <header id="header">
@@ -130,21 +130,22 @@
             <div class="colum">
             </div class="container"> 
                 <h2>Registro</h2>
-                <form action="javascript:void(0)" onsubmit="obtenerValoresFormulario()">
+                <!-- <form action="javascript:void(0)" onsubmit="obtenerValoresFormulario()"> -->
 
-                    <input required class="form-control" type="email" name="" placeholder="Ingrese su correo" id="txtCorreo">
+                    <form action="javascript:void(0)" @submit="obtenerValoresFormulario()"></form>
+                    <input v-model="usuario.correo" required class="form-control" type="email" name="" placeholder="Ingrese su correo" id="txtCorreo">
                     <br>
-                    <input required class="form-control" type="text"  placeholder="Ingrese su solicitud" id="txtNombre">
+                    <input v-model="usuario.nombre" required class="form-control" type="text"  placeholder="Ingrese su solicitud" id="txtNombre">
                     <br>
-                    <input required class="form-control" type="text" placeholder="Ingrese su celular" id="txtCelular">
+                    <input v-model="usuario.celular" required class="form-control" type="text" placeholder="Ingrese su celular" id="txtCelular">
                     <br>
-                    <input required class="form-control" type="password" placeholder="Ingrese su contraseña" id="txtClave">
+                    <input v-model="usuario.clave" required class="form-control" type="password" placeholder="Ingrese su contraseña" id="txtClave">
                     <br>
-                    <textarea class="form-control" name="" placeholder="Ingrese su direccion" id="txtDireccion" cols="30" rows="10"></textarea>
+                    <textarea v-model="usuario.direccion" class="form-control" name="" placeholder="Ingrese su direccion" id="txtDireccion" cols="30" rows="10"></textarea>
                     <br>
-                    <input class="btn btn-primary"  type="submit" value="Enviar datos" name="" id="">
+                    <input  class="btn btn-primary"  type="submit" value="Enviar datos" name="" id="">
                     <br>
-                    <div class="alert alert-danger" role="alert" id="lblAlerta">
+                    <div v-model="lblAlerta" class="alert alert-danger" role="alert" id="lblAlerta">
                         
                       </div>
                 </form>
@@ -153,9 +154,13 @@
         </div>
     </footer>
 
-    <script src="./index.js"></script>
+</div>
+
+    <!--<script src="./index.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="index.vue.js"></script>
     
 </body>
 </html>
