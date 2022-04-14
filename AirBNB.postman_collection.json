@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "923e0cee-5066-4468-aaab-0f8d1e472596",
+		"name": "AirBNB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "propertyTypes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/airbnb/property-types",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"airbnb",
+						"property-types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orderByReviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/airbnb/order/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"airbnb",
+						"order",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orderByBeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/airbnb/order/beds/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"airbnb",
+						"order",
+						"beds",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allProperties",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/airbnb/all-properties",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"airbnb",
+						"all-properties"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
